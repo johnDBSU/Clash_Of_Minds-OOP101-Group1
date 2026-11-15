@@ -46,7 +46,21 @@ public class ConsoleUtil {
 
     /** Prints the given lines inside a box frame. */
     public static void printBox(String[] lines) {
-        System.out.println("  +" + repeat('-', BOX_WIDTH) + "+");
+        printBox(null, lines);
+    }
+
+    /** Prints the given lines inside a box frame with a title set into the top border. */
+    public static void printBox(String title, String[] lines) {
+        String topBorder = repeat('-', BOX_WIDTH);
+        if (title != null && !title.isEmpty()) {
+            String label = " " + title + " ";
+            if (label.length() <= BOX_WIDTH) {
+                int start = (BOX_WIDTH - label.length()) / 2;
+                topBorder = topBorder.substring(0, start) + label
+                        + topBorder.substring(start + label.length());
+            }
+        }
+        System.out.println("  +" + topBorder + "+");
         for (String line : lines) {
             System.out.println("  |" + padToWidth(line, BOX_WIDTH) + "|");
         }

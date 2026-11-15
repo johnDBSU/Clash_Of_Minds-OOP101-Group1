@@ -9,6 +9,7 @@ public class BattleManager {
 
     private static final String ELIMINATED_TEXT = "X (eliminated by Lucky Guess)";
     private static final String PLAYER_LABEL = "YOU: ";
+    private static final String GAME_TITLE = "C L A S H   O F   M I N D S";
 
     private final Player player;
     private final Enemy enemy;
@@ -121,7 +122,7 @@ public class BattleManager {
 
     private void printBattleIntro() {
         System.out.println();
-        ConsoleUtil.printLine();
+        ConsoleUtil.printBanner(GAME_TITLE);
         System.out.print(enemy.getArt());
         System.out.println("  " + enemy.getName() + " " + enemy.getIntroLine());
         ConsoleUtil.printLine();
@@ -146,7 +147,7 @@ public class BattleManager {
         lines[artRows + 2] = ConsoleUtil.buildHpBar(
                 PLAYER_LABEL + player.getName(), player.getHp(), player.getMaxHp());
         lines[artRows + 3] = ConsoleUtil.buildHpBar(enemy.getName(), enemy.getHp(), enemy.getMaxHp());
-        ConsoleUtil.printBox(lines);
+        ConsoleUtil.printBox(GAME_TITLE, lines);
     }
 
     /** Splits art into lines. split() already discards the trailing empty line. */
