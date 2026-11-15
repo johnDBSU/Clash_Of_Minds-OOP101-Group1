@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Controls the whole game: hero select, the 4 stages (3 students + 1
- * professor each), healing between stages and the win/lose screens.
+ * Controls the whole game aka. the actual main code. It has hero select, the 4 stages which is 3 students + 1
+ * professor each stage, healing between stages and the win/lose screens.
  */
 public class Game {
 
@@ -20,8 +20,8 @@ public class Game {
             "Java Basics", "Control Flow", "Methods and Arrays", "Object-Oriented Programming"
     };
     private static final String[] STUDENT_NAMES = {
-            "Chad the Crammer", "Mika the Mnemonic", "Ravi the Rote-Learner",
-            "Tessa the Terminology", "Ben the Blueprint", "Nina the Notetaker",
+            "Chad the Crammer", "Mika the Auditory Learner", "Ravi the Rote-Learner",
+            "Tessa the Terminologist", "Ben the Blueprint Maker", "Nina the Notetaker",
             "Omar the Overconfident", "Lia the Last-Minute"
     };
 
@@ -57,7 +57,7 @@ public class Game {
 
     private Player chooseHero() {
         Player[] heroes = {
-                new CodeKnight("Sir Compilealot"),
+                new CodeKnight("Sir Compile-lot"),
                 new QuickCoder("Zippy the Quick"),
                 new WiseScholar("Sage Mindwell"),
                 new LuckyRookie("Dice the Lucky")

@@ -12,7 +12,7 @@ public class Main {
         } catch (NoSuchElementException e) {
             // input stream was closed (e.g. Ctrl+D / piped input ran out)
             System.out.println();
-            System.out.println("  Input closed. Goodbye!");
+            System.out.println("Input closed. Goodbye!");
         }
     }
 }
