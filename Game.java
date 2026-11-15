@@ -82,8 +82,17 @@ public class Game {
         String[][] arts = new String[heroes.length][];
         int artHeight = 0;
         for (int i = 0; i < heroes.length; i++) {
-            arts[i] = heroes[i].getArt().split("\n");
-            artHeight = Math.max(artHeight, arts[i].length);
+            String[] raw = heroes[i].getArt().split("\n");
+            int maxWidth = 0;
+            for (String line : raw) {
+                maxWidth = Math.max(maxWidth, trimTrailing(line).length());
+            }
+            int indent = Math.max(0, (columnWidth - maxWidth) / 2);
+            arts[i] = new String[raw.length];
+            for (int j = 0; j < raw.length; j++) {
+                arts[i][j] = ConsoleUtil.repeat(' ', indent) + trimTrailing(raw[j]);
+            }
+            artHeight = Math.max(artHeight, raw.length);
         }
 
         for (int row = 0; row < heroes.length; row += 2) {
@@ -114,6 +123,15 @@ public class Game {
                 System.out.println(ConsoleUtil.padToWidth(leftLine, columnWidth) + rightLine);
             }
         }
+    }
+
+    /** Removes trailing spaces so art centering measures the visible width. */
+    private String trimTrailing(String text) {
+        int end = text.length();
+        while (end > 0 && text.charAt(end - 1) == ' ') {
+            end--;
+        }
+        return text.substring(0, end);
     }
 
     /** Breaks text on spaces so each line fits the given width, keeping the indent. */

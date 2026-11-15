@@ -34,13 +34,13 @@ public class LuckyRookie extends Player {
     @Override
     public String getArt() {
         return ""
-                + "         *  *  *          \n"
-                + "          ╲ │ ╱           \n"
-                + "           ╲│╱       ┌────┐\n"
-                + "          │ o o │   │ o  │\n"
-                + "          │  w  │   │  o │\n"
-                + "         ╱│=====│╲  └────┘\n"
-                + "        ╱ │ ### │ ╲       \n"
-                + "          │_____│         \n";
+                + "       * * *          \n"
+                + "        \\|/           \n"
+                + "         |      +----+\n"
+                + "      | o o |   | o  |\n"
+                + "      |  w  |   |  o |\n"
+                + "     /|=====|\\  +----+\n"
+                + "    / | ### | \\        \n"
+                + "      |_____|          \n";
     }
 }

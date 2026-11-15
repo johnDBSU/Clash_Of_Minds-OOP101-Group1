@@ -8,6 +8,7 @@ import java.util.Random;
 public class BattleManager {
 
     private static final String ELIMINATED_TEXT = "X (eliminated by Lucky Guess)";
+    private static final String PLAYER_LABEL = "YOU: ";
 
     private final Player player;
     private final Enemy enemy;
@@ -134,14 +135,16 @@ public class BattleManager {
 
         // build the arena: hero art on the left, enemy art on the right, bars below
         String[] lines = new String[artRows + 4];
-        lines[0] = ConsoleUtil.padToWidth(player.getName(), 26) + "vs " + enemy.getName();
+        lines[0] = ConsoleUtil.padToWidth(PLAYER_LABEL + player.getName(), 26)
+                + "vs " + enemy.getName();
         for (int i = 0; i < artRows; i++) {
             String leftSide = (i < playerArt.length) ? playerArt[i] : "";
             String rightSide = (i < enemyArt.length) ? enemyArt[i] : "";
             lines[1 + i] = ConsoleUtil.padToWidth(leftSide, 26) + rightSide;
         }
         lines[artRows + 1] = "";
-        lines[artRows + 2] = ConsoleUtil.buildHpBar(player.getName(), player.getHp(), player.getMaxHp());
+        lines[artRows + 2] = ConsoleUtil.buildHpBar(
+                PLAYER_LABEL + player.getName(), player.getHp(), player.getMaxHp());
         lines[artRows + 3] = ConsoleUtil.buildHpBar(enemy.getName(), enemy.getHp(), enemy.getMaxHp());
         ConsoleUtil.printBox(lines);
     }
