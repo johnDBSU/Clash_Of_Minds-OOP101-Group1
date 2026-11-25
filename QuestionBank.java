@@ -59,7 +59,7 @@ public class QuestionBank {
     }
 
     // ------------------------------------------------------------------
-    // EASY pool: Java basics (40 questions)
+    // EASY pool: Java basics (50 questions)
     // ------------------------------------------------------------------
 
     private void fillEasyPool() {
@@ -103,10 +103,20 @@ public class QuestionBank {
         easyPool.add(easy("When does (a || b) return true?", "only if both are true", "if at least one is true", "only if both are false", "never", 1));
         easyPool.add(easy("Which command compiles a Java source file?", "java Hello.java", "javac Hello.java", "compile Hello.java", "run Hello.java", 1));
         easyPool.add(easy("What does i += 2 mean?", "i = 2", "i = i + 2", "i = i * 2", "i = 2 + 2", 1));
+        easyPool.add(easy("Which keyword is used to inherit from a class?", "implements", "inherits", "extends", "super", 2));
+        easyPool.add(easy("Which class is commonly used to read user input from the keyboard?", "Printer", "Scanner", "Writer", "Keyboard", 1));
+        easyPool.add(easy("What does the length() method of a String return?", "the number of words", "the last index", "the size in bytes", "the number of characters", 3));
+        easyPool.add(easy("Which operator increases a variable by 1?", "++", "+++", "+1", "^^", 0));
+        easyPool.add(easy("Which method compares the content of two Strings?", "==", "equals()", "compare()", "same()", 1));
+        easyPool.add(easy("Which keyword is used to manually throw an exception?", "raise", "throw", "catch", "error", 1));
+        easyPool.add(easy("Which class is the parent of all classes in Java?", "Object", "Class", "Main", "Base", 0));
+        easyPool.add(easy("How do you write a multi-line comment?", "//", "#", "<!-- -->", "/* ... */", 3));
+        easyPool.add(easy("Which keyword is used to bring in a package or class from another package?", "include", "using", "import", "require", 2));
+        easyPool.add(easy("Which expression gets the first character of the String s?", "s[0]", "s.charAt(0)", "s.get(0)", "s.at(0)", 1));
     }
 
     // ------------------------------------------------------------------
-    // HARD pool: OOP and deeper Java (20 questions) - asked by professors
+    // HARD pool: OOP and deeper Java (30 questions) - asked by professors
     // ------------------------------------------------------------------
 
     private void fillHardPool() {
@@ -130,5 +140,15 @@ public class QuestionBank {
         hardPool.add(hard("If a subclass overrides a method, which version runs?", "always the superclass version", "the version of the actual object at runtime", "a random one", "both, one after the other", 1));
         hardPool.add(hard("What does this(...) do inside a constructor?", "calls another constructor of the same class", "creates a new object", "calls the parent constructor", "exits the constructor", 0));
         hardPool.add(hard("Which statement about constructors is TRUE?", "constructors declare a return type", "a class can only have one constructor", "constructors share the class name and have no return type", "constructors are always static", 2));
+        hardPool.add(hard("What does the final keyword do on a method?", "It prevents the method from being overridden", "It makes the method static", "It makes the method abstract", "It prevents the method from being called", 0));
+        hardPool.add(hard("Which collection stores key-value pairs?", "HashSet", "ArrayList", "HashMap", "Stack", 2));
+        hardPool.add(hard("Can an interface be instantiated directly with new?", "Yes, always", "No, only a class implementing it can be", "Yes, if it has no methods", "Only inside the same package", 1));
+        hardPool.add(hard("What is the difference between == and equals() for Strings?", "== compares references, equals() compares content", "== compares content, equals() compares references", "There is no difference", "== is faster, so it is always correct", 0));
+        hardPool.add(hard("What happens if a concrete class does not implement all abstract methods it inherits?", "It compiles normally", "The missing methods are generated automatically", "It runs with a warning", "It must be declared abstract", 3));
+        hardPool.add(hard("Which statement about interfaces and multiple inheritance is TRUE?", "A class can extend multiple classes", "Interfaces cannot be implemented", "A class can implement multiple interfaces", "Only abstract classes can have multiple parents", 2));
+        hardPool.add(hard("What does the protected access modifier allow?", "Access only within the same class", "Access from the same package and from subclasses", "Access from everywhere", "Access only from other packages", 1));
+        hardPool.add(hard("What is the purpose of the toString() method?", "To return a String representation of the object", "To convert a String into an object", "To compare two Strings", "To delete the object", 0));
+        hardPool.add(hard("What is autoboxing?", "Putting objects inside arrays", "Converting a class into an interface", "Copying an object into a new box", "Automatic conversion between a primitive and its wrapper class", 3));
+        hardPool.add(hard("What does the throws keyword do in a method declaration?", "It throws an exception immediately", "It catches an exception", "It declares that the method may pass an exception to its caller", "It stops the program", 2));
     }
 }
