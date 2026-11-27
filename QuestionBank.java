@@ -59,7 +59,7 @@ public class QuestionBank {
     }
 
     // ------------------------------------------------------------------
-    // EASY pool: Java basics (50 questions)
+    // EASY pool: Java basics (55 questions)
     // ------------------------------------------------------------------
 
     private void fillEasyPool() {
@@ -121,7 +121,7 @@ public class QuestionBank {
     }
 
     // ------------------------------------------------------------------
-    // HARD pool: OOP and deeper Java (30 questions) - asked by professors
+    // HARD pool: OOP and deeper Java (36 questions) - asked by professors
     // ------------------------------------------------------------------
 
     private void fillHardPool() {
