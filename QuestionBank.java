@@ -113,6 +113,12 @@ public class QuestionBank {
         easyPool.add(easy("How do you write a multi-line comment?", "//", "#", "<!-- -->", "/* ... */", 3));
         easyPool.add(easy("Which keyword is used to bring in a package or class from another package?", "include", "using", "import", "require", 2));
         easyPool.add(easy("Which expression gets the first character of the String s?", "s[0]", "s.charAt(0)", "s.get(0)", "s.at(0)", 1));
+        easyPool.add(easy("Which keyword is used to create a subclass in Java?", "A. extends", "B. inherits", "C. subclass", "D. implements", 0));
+        easyPool.add(easy("Which data type stores either true or false?", "A. char", "B. boolean", "C. byte", "D. String", 1));
+        easyPool.add(easy("Which symbol is used for a single-line comment in Java?", "A. /*", "B. #", "C. //", "D. <!--", 2));
+        easyPool.add(easy("Which keyword is used to stop a loop immediately?", "A. stop", "B. exit", "C. skip", "D. break", 3));
+        easyPool.add(easy("Which method is used to convert a String into an integer?", "A. Integer.parseInt()", "B. Integer.toString()", "C. String.valueOf()", "D. Integer.convert()", 0));
+    
     }
 
     // ------------------------------------------------------------------
@@ -142,7 +148,7 @@ public class QuestionBank {
         hardPool.add(hard("Which statement about constructors is TRUE?", "constructors declare a return type", "a class can only have one constructor", "constructors share the class name and have no return type", "constructors are always static", 2));
         hardPool.add(hard("What does the final keyword do on a method?", "It prevents the method from being overridden", "It makes the method static", "It makes the method abstract", "It prevents the method from being called", 0));
         hardPool.add(hard("Which collection stores key-value pairs?", "HashSet", "ArrayList", "HashMap", "Stack", 2));
-        hardPool.add(hard("Can an interface be instantiated directly with new?", "Yes, always", "No, only a class implementing it can be", "Yes, if it has no methods", "Only inside the same package", 1));
+        hardPool.add(hard("Can an in terface be instantiated directly with new?", "Yes, always", "No, only a class implementing it can be", "Yes, if it has no methods", "Only inside the same package", 1));
         hardPool.add(hard("What is the difference between == and equals() for Strings?", "== compares references, equals() compares content", "== compares content, equals() compares references", "There is no difference", "== is faster, so it is always correct", 0));
         hardPool.add(hard("What happens if a concrete class does not implement all abstract methods it inherits?", "It compiles normally", "The missing methods are generated automatically", "It runs with a warning", "It must be declared abstract", 3));
         hardPool.add(hard("Which statement about interfaces and multiple inheritance is TRUE?", "A class can extend multiple classes", "Interfaces cannot be implemented", "A class can implement multiple interfaces", "Only abstract classes can have multiple parents", 2));
@@ -150,5 +156,10 @@ public class QuestionBank {
         hardPool.add(hard("What is the purpose of the toString() method?", "To return a String representation of the object", "To convert a String into an object", "To compare two Strings", "To delete the object", 0));
         hardPool.add(hard("What is autoboxing?", "Putting objects inside arrays", "Converting a class into an interface", "Copying an object into a new box", "Automatic conversion between a primitive and its wrapper class", 3));
         hardPool.add(hard("What does the throws keyword do in a method declaration?", "It throws an exception immediately", "It catches an exception", "It declares that the method may pass an exception to its caller", "It stops the program", 2));
+        hardPool.add(hard("Which OOP concept allows one interface to be used for different implementations?", "A. Encapsulation", "B. Polymorphism", "C. Inheritance", "D. Constructor", 1));
+        hardPool.add(hard("What is the main purpose of an interface in Java?", "A. To store objects directly", "B. To create primitive variables", "C. To define methods that implementing classes must provide", "D. To prevent all inheritance", 2));
+        hardPool.add(hard("Which keyword prevents a method from being overridden by a subclass?", "A. static", "B. private", "C. final", "D. protected", 2));
+        hardPool.add(hard("What will happen if a class implements an interface but does not implement all of its abstract methods?", "A. The class must be declared abstract", "B. The interface is automatically deleted", "C. The methods become private", "D. The program ignores the missing methods", 0));
+        hardPool.add(hard("Which statement correctly describes constructor overloading?", "A. A class has constructors with different parameter lists", "B. A constructor is inherited from another class", "C. A constructor is declared with a return type", "D. A constructor can only be called once", 0)); 
     }
 }
