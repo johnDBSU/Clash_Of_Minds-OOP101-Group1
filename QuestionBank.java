@@ -113,12 +113,11 @@ public class QuestionBank {
         easyPool.add(easy("How do you write a multi-line comment?", "//", "#", "<!-- -->", "/* ... */", 3));
         easyPool.add(easy("Which keyword is used to bring in a package or class from another package?", "include", "using", "import", "require", 2));
         easyPool.add(easy("Which expression gets the first character of the String s?", "s[0]", "s.charAt(0)", "s.get(0)", "s.at(0)", 1));
-        easyPool.add(easy("Which keyword is used to create a subclass in Java?", "A. extends", "B. inherits", "C. subclass", "D. implements", 0));
-        easyPool.add(easy("Which data type stores either true or false?", "A. char", "B. boolean", "C. byte", "D. String", 1));
-        easyPool.add(easy("Which symbol is used for a single-line comment in Java?", "A. /*", "B. #", "C. //", "D. <!--", 2));
-        easyPool.add(easy("Which keyword is used to stop a loop immediately?", "A. stop", "B. exit", "C. skip", "D. break", 3));
-        easyPool.add(easy("Which method is used to convert a String into an integer?", "A. Integer.parseInt()", "B. Integer.toString()", "C. String.valueOf()", "D. Integer.convert()", 0));
-    
+        easyPool.add(easy("Which keyword is used to create a subclass in Java?", "extends", "inherits", "subclass", "implements", 0));
+        easyPool.add(easy("Which data type stores either true or false?", "char", "boolean", "byte", "String", 1));
+        easyPool.add(easy("Which symbol is used for a single-line comment in Java?", "/*", "#", "//", "<!--", 2));
+        easyPool.add(easy("Which keyword is used to stop a loop immediately?", "stop", "exit", "skip", "break", 3));
+        easyPool.add(easy("Which method is used to convert a String into an integer?", "Integer.parseInt()", "Integer.toString()", "String.valueOf()", "Integer.convert()", 0));    
     }
 
     // ------------------------------------------------------------------
