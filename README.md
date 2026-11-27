@@ -139,8 +139,8 @@ All sprites are 8 lines tall, at most 25 columns wide, with the eyes fixed on li
 
 ## Question bank
 
-- 40 easy questions covering Java basics.
-- 20 hard questions covering OOP and deeper Java.
+- 55 easy questions covering Java basics.
+- 36 hard questions covering OOP and deeper Java.
 - Questions are drawn randomly without repeating until a pool is exhausted, then the pool refills.
 
 ## Project structure
