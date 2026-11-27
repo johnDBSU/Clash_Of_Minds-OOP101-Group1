@@ -49,6 +49,6 @@ public abstract class Enemy {
     /** Line the enemy says when the battle starts. */
     public abstract String getIntroLine();
 
-    /** ASCII art shown when the battle starts. 8 lines, eyes on line 4. */
+    /** ASCII art shown when the battle starts. 10 lines, eyes on line 5. */
     public abstract String getArt();
 }

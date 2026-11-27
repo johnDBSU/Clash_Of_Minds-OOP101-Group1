@@ -31,14 +31,35 @@ public class Professor extends Enemy {
 
     @Override
     public String getArt() {
-        return ""
-                + "        ___           \n"
-                + "       /   \\     +---+\n"
-                + "      /     \\    | = |\n"
-                + "     | o   o |   | = |\n"
-                + "     |  ~~~  |   | = |\n"
-                + "    /|=======|\\  +---+\n"
-                + "   / |  |#|  | \\       \n"
-                + "     +--+ +--+         \n";
+        String fallback = ""
+                + "        ___             \n"
+                + "       ╱   ╲      ╔═══╗\n"
+                + "      ╱     ╲     ║ ▓ ║\n"
+                + "     │       │    ║ ▓ ║\n"
+                + "     │ o   o │    ║ ▓ ║\n"
+                + "     │  ~~~  │    ║ ▓ ║\n"
+                + "    ╱│═══════│╲   ╚═══╝\n"
+                + "   ╱ │  │#│  │ ╲         \n"
+                + "  ╱  │       │  ╲        \n"
+                + "     ╚══╤═╤══╝          \n";
+        String spriteId = spriteForBoss(getName());
+        return SpriteLoader.load(spriteId, SpriteLoader.load("professor", fallback));
+    }
+
+    private static String spriteForBoss(String bossName) {
+        if (bossName == null) {
+            return "professor";
+        }
+        String lower = bossName.toLowerCase();
+        if (lower.contains("loopwell")) {
+            return "professor_loopwell";
+        }
+        if (lower.contains("stacksmann")) {
+            return "professor_stacksmann";
+        }
+        if (lower.contains("nullpointer")) {
+            return "professor_nullpointer";
+        }
+        return "professor";
     }
 }
