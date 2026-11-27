@@ -11,8 +11,8 @@ public class Main {
             game.start();
         } catch (NoSuchElementException e) {
             // input stream was closed (e.g. Ctrl+D / piped input ran out)
-            System.out.println();
-            System.out.println("Input closed. Goodbye!");
+            ConsoleUtil.println();
+            ConsoleUtil.println(ConsoleUtil.FG_MUTED + "Input closed. Goodbye!");
         }
     }
 }
