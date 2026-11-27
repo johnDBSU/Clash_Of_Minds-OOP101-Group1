@@ -156,9 +156,10 @@ public class QuestionBank {
         hardPool.add(hard("What is autoboxing?", "Putting objects inside arrays", "Converting a class into an interface", "Copying an object into a new box", "Automatic conversion between a primitive and its wrapper class", 3));
         hardPool.add(hard("What does the throws keyword do in a method declaration?", "It throws an exception immediately", "It catches an exception", "It declares that the method may pass an exception to its caller", "It stops the program", 2));
         hardPool.add(hard("Which OOP concept allows one interface to be used for different implementations?", "A. Encapsulation", "B. Polymorphism", "C. Inheritance", "D. Constructor", 1));
-        hardPool.add(hard("What is the main purpose of an interface in Java?", "A. To store objects directly", "B. To create primitive variables", "C. To define methods that implementing classes must provide", "D. To prevent all inheritance", 2));
-        hardPool.add(hard("Which keyword prevents a method from being overridden by a subclass?", "A. static", "B. private", "C. final", "D. protected", 2));
-        hardPool.add(hard("What will happen if a class implements an interface but does not implement all of its abstract methods?", "A. The class must be declared abstract", "B. The interface is automatically deleted", "C. The methods become private", "D. The program ignores the missing methods", 0));
-        hardPool.add(hard("Which statement correctly describes constructor overloading?", "A. A class has constructors with different parameter lists", "B. A constructor is inherited from another class", "C. A constructor is declared with a return type", "D. A constructor can only be called once", 0)); 
+        hardPool.add(hard("Which OOP concept allows one interface to be used for different implementations?", "Encapsulation", "Polymorphism", "Inheritance", "Constructor", 1));
+        hardPool.add(hard("What is the main purpose of an interface in Java?", "To store objects directly", "To create primitive variables", "To define methods that implementing classes must provide", "To prevent all inheritance", 2));
+        hardPool.add(hard("Which keyword prevents a method from being overridden by a subclass?", "static", "private", "final", "protected", 2));
+        hardPool.add(hard("What will happen if a class implements an interface but does not implement all of its abstract methods?", "The class must be declared abstract", "The interface is automatically deleted", "The methods become private", "The program ignores the missing methods", 0));
+        hardPool.add(hard("Which statement correctly describes constructor overloading?", "A class has constructors with different parameter lists", "A constructor is inherited from another class", "A constructor is declared with a return type", "A constructor can only be called once", 0));
     }
 }
