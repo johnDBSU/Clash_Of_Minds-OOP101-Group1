@@ -155,7 +155,6 @@ public class QuestionBank {
         hardPool.add(hard("What is the purpose of the toString() method?", "To return a String representation of the object", "To convert a String into an object", "To compare two Strings", "To delete the object", 0));
         hardPool.add(hard("What is autoboxing?", "Putting objects inside arrays", "Converting a class into an interface", "Copying an object into a new box", "Automatic conversion between a primitive and its wrapper class", 3));
         hardPool.add(hard("What does the throws keyword do in a method declaration?", "It throws an exception immediately", "It catches an exception", "It declares that the method may pass an exception to its caller", "It stops the program", 2));
-        hardPool.add(hard("Which OOP concept allows one interface to be used for different implementations?", "A. Encapsulation", "B. Polymorphism", "C. Inheritance", "D. Constructor", 1));
         hardPool.add(hard("Which OOP concept allows one interface to be used for different implementations?", "Encapsulation", "Polymorphism", "Inheritance", "Constructor", 1));
         hardPool.add(hard("What is the main purpose of an interface in Java?", "To store objects directly", "To create primitive variables", "To define methods that implementing classes must provide", "To prevent all inheritance", 2));
         hardPool.add(hard("Which keyword prevents a method from being overridden by a subclass?", "static", "private", "final", "protected", 2));

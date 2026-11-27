@@ -9,16 +9,27 @@ Answer Java and OOP questions to damage your opponent. A wrong answer lets them 
 ## Requirements
 
 - JDK 8 or newer
-- Any terminal; the game uses plain ASCII, no external libraries
+- A UTF-8 terminal with a font that supports box-drawing characters. Consolas, Cascadia Mono and JetBrains Mono all cover them.
 
 ## Run
 
-From the project root:
+Windows: run `run.bat` from the project root.
 
-```bash
-javac *.java
-java Main
+```bat
+run.bat
 ```
+
+The script switches the console to UTF-8, compiles with `-encoding UTF-8`, and starts the game.
+
+Manual run:
+
+```bat
+chcp 65001
+javac -encoding UTF-8 *.java
+java -Dstdout.encoding=UTF-8 Main
+```
+
+If the screen shows `?` instead of borders, the console is not in UTF-8. Run `chcp 65001` in that window before `java Main`, or use `run.bat`.
 
 ## Controls
 
@@ -55,92 +66,10 @@ java Main
 | 3 | Methods and Arrays | Professor Stacksmann |
 | 4 | Object-Oriented Programming | Dr. NullPointer |
 
-## Roster
-
-All sprites are 8 lines tall, at most 25 columns wide, with the eyes fixed on line 4. Hero selection shows them in a 2x2 grid; battles place the hero and enemy side by side.
-
-### CodeKnight
-
-```text
-         ^
-        / \
-       /___\     +-----+
-      | o o |    |#####|
-      |  -  |    |#####|
-     /|=====|\   |#####|
-    / | ### | \  +-----+
-      d     b
-```
-
-### QuickCoder
-
-```text
-        .-.
-         |
-       /^^^\
-      | o o |     +----+
-      |  >  |===> >|[##]|
-     /|=====|\     +----+
-    / | ### | \
-      d     b
-```
-
-### WiseScholar
-
-```text
-         ^
-        / \
-       /___\     +---+
-      | o o |    | = |
-      |  _  |    | = |
-     /|=====|\   | = |
-    / | ### | \  +---+
-      |_____|
-```
-
-### LuckyRookie
-
-```text
-       * * *
-        \|/
-         |      +----+
-      | o o |   | o  |
-      |  w  |   |  o |
-     /|=====|\  +----+
-    / | ### | \
-      |_____|
-```
-
-### Student
-
-```text
-        ___
-       /   \
-      |     |   +-----+
-      | o o |   | []  |
-      |  .  |   |     |
-     /|=====|\  +-----+
-    / | ### | \
-      d     b
-```
-
-### Professor
-
-```text
-        ___
-       /   \     +---+
-      /     \    | = |
-     | o   o |   | = |
-     |  ~~~  |   | = |
-    /|=======|\  +---+
-   / |  |#|  | \
-     +--+ +--+
-```
-
 ## Question bank
 
 - 55 easy questions covering Java basics.
-- 36 hard questions covering OOP and deeper Java.
+- 35 hard questions covering OOP and deeper Java.
 - Questions are drawn randomly without repeating until a pool is exhausted, then the pool refills.
 
 ## Project structure
@@ -149,7 +78,7 @@ All sprites are 8 lines tall, at most 25 columns wide, with the eyes fixed on li
 |---|---|
 | `Main.java` | Entry point; handles a closed input stream |
 | `Game.java` | Run flow, hero grid, stages, healing, end screens |
-| `BattleManager.java` | One battle: questions, turns, Lucky Guess, damage |
+| `BattleManager.java` | One battle: questions, turns, Lucky Guess, damage, arena HUD |
 | `Player.java` | Abstract hero: HP, attack, perk hooks, art contract |
 | `Enemy.java` | Abstract enemy: HP, attack, difficulty, art contract |
 | `Student.java` | Normal enemy: 30 HP, 12 ATK, easy questions |
@@ -160,7 +89,7 @@ All sprites are 8 lines tall, at most 25 columns wide, with the eyes fixed on li
 | `LuckyRookie.java` | Utility hero: three Lucky Guess charges |
 | `Question.java` | One multiple-choice question and its difficulty |
 | `QuestionBank.java` | Question pools and no-repeat random draw |
-| `ConsoleUtil.java` | Shared input, box frames, HP bars, screen clearing |
+| `ConsoleUtil.java` | Shared input, Unicode boxes, HP bars, screen clearing |
 
 ## OOP concepts in use
 
@@ -174,6 +103,6 @@ All sprites are 8 lines tall, at most 25 columns wide, with the eyes fixed on li
 
 ## Notes
 
-- No build tool or external dependency. `javac *.java` is enough.
-- The ASCII roster is the only UI asset; there are no images or fonts to install.
+- No build tool or external dependency. `run.bat` compiles and runs.
+- The Unicode roster is the only UI asset; the terminal needs a font that covers box-drawing characters.
 - Hero names are fixed; student names are drawn from a pool of eight.
