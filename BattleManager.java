@@ -66,8 +66,10 @@ public class BattleManager {
         } else {
             System.out.println();
             System.out.println("  >> WRONG! The correct answer was: " + question.getChoices()[question.getAnswerIndex()]);
+            int hpBefore = player.getHp();
             player.takeDamage(enemy.getAttackPower());
-            System.out.println("  >> " + enemy.getName() + " strikes back! You take " + enemy.getAttackPower() + " damage.");
+            int damageTaken = hpBefore - player.getHp();
+            System.out.println("  >> " + enemy.getName() + " strikes back! You take " + damageTaken + " damage.");
         }
     }
 
