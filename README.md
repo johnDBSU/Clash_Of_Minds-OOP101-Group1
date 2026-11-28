@@ -66,6 +66,103 @@ If the screen shows `?` instead of borders, the console is not in UTF-8. Run `ch
 | 3 | Methods and Arrays | Professor Stacksmann |
 | 4 | Object-Oriented Programming | Dr. NullPointer |
 
+<<<<<<< HEAD
+=======
+## Roster
+
+All sprites are 10 lines tall, at most 25 columns wide, with the eyes fixed on line 5. Hero selection shows them in a 2x2 grid; battles place them in split panes with a center divider. The battle HUD shows the stage, labels your hero as `YOU`, tags enemy difficulty, and puts compact HP bars under each fighter.
+
+### CodeKnight
+
+```text
+          ^
+         ╱ ╲
+        ╱___╲     ╔═════╗
+       │     │    ║█████║
+       │ o o │    ║█████║
+       │  -  │    ║█████║
+      ╱│═════│╲   ║█████║
+     ╱ │ ### │ ╲  ╚═════╝
+    ╱  │_____│  ╲
+         d   b
+```
+
+### QuickCoder
+
+```text
+         .-.
+          │
+        ╱^^^╲
+       │     │    ╔════╗
+       │ o o │    ║[##]║
+       │  >  │══> ╚════╝
+      ╱│═════│╲
+     ╱ │ ### │ ╲
+    ╱  │     │  ╲
+       d     b
+```
+
+### WiseScholar
+
+```text
+          ^
+         ╱ ╲
+        ╱___╲       ╔═══╗
+       │     │      ║ ▓ ║
+       │ o o │      ║ ▓ ║
+       │  _  │      ║ ▓ ║
+      ╱│═════│╲     ║ ▓ ║
+     ╱ │ ### │ ╲    ╚═══╝
+    ╱  │_____│  ╲
+         d   b
+```
+
+### LuckyRookie
+
+```text
+       * * *
+        ╲│╱
+         │
+        ╱ ╲       ╔════╗
+       │ o o │    ║ o  ║
+       │  w  │    ║  o ║
+      ╱│═════│╲   ╚════╝
+     ╱ │ ### │ ╲
+    ╱  │_____│  ╲
+         d   b
+```
+
+### Student
+
+```text
+        ___
+       ╱   ╲
+      │     │
+      │     │    ╔═════╗
+      │ o o │    ║ []  ║
+      │  .  │    ║     ║
+     ╱│═════│╲   ╚═════╝
+    ╱ │ ### │ ╲
+   ╱  │     │  ╲
+      d     b
+```
+
+### Professor
+
+```text
+        ___
+       ╱   ╲      ╔═══╗
+      ╱     ╲     ║ ▓ ║
+     │       │    ║ ▓ ║
+     │ o   o │    ║ ▓ ║
+     │  ~~~  │    ║ ▓ ║
+    ╱│═══════│╲   ╚═══╝
+   ╱ │  │#│  │ ╲
+  ╱  │       │  ╲
+     ╚══╤═╤══╝
+```
+
+>>>>>>> 35a25f8 (feat: upgrade battle arena HUD, 1x4 hero select, battle progress counter, and end-screen sprites)
 ## Question bank
 
 - 55 easy questions covering Java basics.
